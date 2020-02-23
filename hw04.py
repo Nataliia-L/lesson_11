@@ -1,10 +1,14 @@
+#Прочитать информацию из файла, в котором содержится тест дзен python
+#(предварительно сформировать файл, вручную скопировав текст дзен из интерпретатора). 
+#Упорядочить все слова из этого файла в порядке возрастания длины слова. 
+#То есть результирующий список слов будет иметь примерно такой вид: 
+#['a', 'a', 'of', 'by', 'is', 'is', 'is' …  'implementation', 'implementation’]. 
+#Подсказка, необходимо при вызове метода sort или функции sorted указывать аргумент key. 
+
+
 import this
-# print ()
+
 with open ('dzen.txt') as f:
-    lines = f.read ()
-    new_file = []
-    for item in lines:
-        # key = len (item)
-        new_file.append(lines)
-        new_file.sort()
-print (new_file)
+    lines = f.readlines ()
+result = sorted(str(lines).split(),key=len)
+print (result)
